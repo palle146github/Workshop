@@ -18,11 +18,8 @@ public class AddressBook {
 
     Contacts contact = new Contacts();
     List<Contacts> contactsList = new ArrayList<>();
-
-
-    Map<String, List<Contacts>> contactsByCity = new HashMap<>();
-    Map<String, List<Contacts>>  contactByState = new HashMap<>();
-
+//    Map<String, List<Contacts>> contactsByCity = new HashMap<>();
+//    Map<String, List<Contacts>>  contactByState = new HashMap<>();
     public void addContact() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Contact First Name");
