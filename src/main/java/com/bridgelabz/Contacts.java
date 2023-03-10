@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.Arrays;
+
 public class Contacts {
     private String firstName;
     private String lastName;
@@ -100,4 +102,5 @@ public class Contacts {
                 ", email='" + email + '\'' +
                 '}';
     }
+    
 }
