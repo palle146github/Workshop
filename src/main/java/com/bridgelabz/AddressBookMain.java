@@ -3,7 +3,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class AddressBookMain {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         AddressBook addressBook = new AddressBook();
@@ -15,7 +14,14 @@ public class AddressBookMain {
         int userOption = 0;
         while (userOption != 6) {
             System.out.println("Choose an option");
-            System.out.println("1. Add new Address Book 2. Edit Address Book  3. Show Address Books  4. Show all Contacts  5. Show City Contact Map 6. Show State Contact Map 7. Write Address Book Data into txt file  8. Exit From main Menu");
+            System.out.println("1. Add new Address Book ");
+            System.out.println("2. Edit Address Book ");
+            System.out.println("3. Show Address Books");
+            System.out.println("4  Show all Contacts ");
+            System.out.println("5. Show City Contact Map");
+            System.out.println("6. Show State Contact Map");
+            System.out.println("7. Write Address Book Data into txt file");
+            System.out.println("8. Exit From main Menu");
             int useroption1 = s.nextInt();
             switch (useroption1) {
                 case 1:
@@ -31,9 +37,10 @@ public class AddressBookMain {
                     int userOption2 = 0;
                     while (userOption2 != 3) {
                         System.out.println("");
-
                         System.out.println("Choose an option");
-                        System.out.println("1. Add Contact   2. Show Contacts   3. Exit From Contact Menu  ");
+                        System.out.println("1. Add Contact");
+                        System.out.println("2. Show Contacts");
+                        System.out.println("3. Exit From Contact Menu");
                         int userOption3 = s2.nextInt();
                         System.out.println("Enter AddressBook Name to perform operation ");
                         String companyName1 = s2.next();
@@ -53,7 +60,6 @@ public class AddressBookMain {
                                     System.out.println("Choose Valid Option");
                                     break;
                             }
-
                         } catch (NullPointerException e) {
                             System.out.println(e.getMessage());
                         }
@@ -70,7 +76,6 @@ public class AddressBookMain {
                         System.out.println("No Address Book exist in the Record");
                     }
                     break;
-
                 case 4:
 //                    for (Map.Entry<String, AddressBook> entry : addressBookMap.entrySet()) {
 //                        String k = entry.getKey();

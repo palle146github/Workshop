@@ -1,24 +1,20 @@
 package com.bridgelabz;
-
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
-
 import static java.util.stream.Collectors.*;
-
 public class AddressBook {
-
     Contacts contact = new Contacts();
     List<Contacts> contactsList = new ArrayList<>();
-//    Map<String, List<Contacts>> contactsByCity = new HashMap<>();
+
+    //    Map<String, List<Contacts>> contactsByCity = new HashMap<>();
 //    Map<String, List<Contacts>>  contactByState = new HashMap<>();
     public void addContact() {
         Scanner scanner = new Scanner(System.in);
@@ -61,7 +57,6 @@ public class AddressBook {
         contactsList.add(contact8);
         System.out.println("Contact added Successfully");
     }
-
     public void showContacts() {
         System.out.println("--------------------------------");
         if (contactsList.isEmpty()) {
@@ -82,19 +77,15 @@ public class AddressBook {
         System.out.println("--------------------------------");
     }
 
-    public void setCityContacts1(){
-        contactsByCity = contactsList.stream().collect(Collectors.groupingBy(Contacts::getCity));
-        System.out.println(contactsByCity);
-    }
-
-    public void setStateContacts1(){
-        contactByState = contactsList.stream().collect(Collectors.groupingBy(Contacts::getState));
-        System.out.println(contactByState);
-    }
-
-
-
-
+//    public void setCityContacts1(){
+//        contactsByCity = contactsList.stream().collect(Collectors.groupingBy(Contacts::getCity));
+//        System.out.println(contactsByCity);
+//    }
+//
+//    public void setStateContacts1(){
+//        contactByState = contactsList.stream().collect(Collectors.groupingBy(Contacts::getState));
+//        System.out.println(contactByState);
+//    }
     public void writeData(Map<String, AddressBook> addressBook) {
         File file = new File("Contacts.txt");
         BufferedWriter bf = null;
@@ -111,11 +102,9 @@ public class AddressBook {
             e.printStackTrace();
         }
     }
-
     public List<Contacts> getContactsList() {
         return contactsList;
     }
-
     public void setContactsList(List<Contacts> contactsList) {
         this.contactsList = contactsList;
     }
